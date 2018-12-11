@@ -62,9 +62,11 @@ function addUser(user) {
 };
 
 app.use(function(req, res, next) {
-	if (req._parsedUrl.pathname.indexOf('api')) {
+	console.log(req._parsedUrl.pathname)
+	if (req._parsedUrl.pathname.indexOf('api')!==-1) {
 		req._parsedUrl.pathname = req._parsedUrl.pathname.substr(4);
 	}
+	console.log(req._parsedUrl.pathname)
 	if (noLogin[req._parsedUrl.pathname]) {
 		next();
 	} else {

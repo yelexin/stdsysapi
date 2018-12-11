@@ -1,6 +1,6 @@
 var MongoClient = require('mongodb').MongoClient;
 var dbName = 'stdsys';
-var url = `mongodb://localhost:27017/${dbName}`;
+var url = `mongodb://158.107.8.2:27017/${dbName}`;
 
 var db = {};
 
